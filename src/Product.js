@@ -44,7 +44,7 @@ console.log('this is the basket',basket)
         </div>
       </div>
 {/* product image */}
-      <img src={image} alt="" />
+      <img src={image} alt=""  />
 
       <button onClick={addToBasket}>Add to Basket</button>
     </div>

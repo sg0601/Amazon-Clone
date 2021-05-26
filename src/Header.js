@@ -30,7 +30,6 @@ function Header() {
       </div>
 
       <div className="header_nav">
-          {/* if there is no user then only push to login page else push to guest page */}
         <Link to={!user && '/login'}>
           <div onClick={handleAuthenticaton} className="header_option">
             <span className="header_optionLineOne">Hello {!user ? 'Guest' : user.email}</span>
@@ -38,7 +37,12 @@ function Header() {
           </div>
         </Link>
 
-        
+        <Link to='/orders'>
+          <div className="header_option">
+            <span className="header_optionLineOne">Returns</span>
+            <span className="header_optionLineTwo">& Orders</span>
+          </div>
+        </Link>
         
 
         <div className="header_option">

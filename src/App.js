@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import './App.css';
 import Header from './Header'
 import Home from './Home'
+import Orders from "./Orders";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Checkout from "./Checkout";
 import Login from './Login'
@@ -14,7 +15,7 @@ import { Elements } from "@stripe/react-stripe-js";
 // paste your stripe publishable key here
 // Promises in JavaScript represent processes that are already happening, which can be chained with callback functions.
 const promise = loadStripe(
-  "pk_test_51IuEOlSFWksaZ29A6H3TY1ZCp4EjccgmxtdmCy1F9oA0GsZLFOhko4MKhu7p4G7gpUeUYXwsSFloZTveHlw5pCgi00mu6k6Fow"
+  "pk_test_51IuO3kJpI78s9dD3d6uWa2T3ngtjL0AZxgNhor4C5fhW35M6ERdijDnKXtuGkdxJfgr9f4szI5RDA8Wy2hTfhf9700TurJvwxE"
 );
 
 
@@ -56,7 +57,11 @@ function App() {
     
       <Switch>
         {/* {/* ROUTE FOR LOGIN PAGE */}
-         <Route path="/login">
+         <Route path="/orders">
+         <Header />
+         <Orders /> 
+        </Route>
+        <Route path="/login">
          <Login /> 
         </Route>
          
